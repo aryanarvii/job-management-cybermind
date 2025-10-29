@@ -51,7 +51,7 @@ export default function JobCard({ job }) {
         <li>{job.responsibilities}</li>
       </ul>
 
-      <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-lg">
+      <button className="mt-4 bg-[#00AAFF] hover:bg-blue-700 text-white font-medium py-2 rounded-lg">
         Apply Now
       </button>
     </div>

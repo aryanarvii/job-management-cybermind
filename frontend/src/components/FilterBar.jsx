@@ -75,7 +75,7 @@ export default function FilterBar({ onJobsFetched }) {
           onChange={setSalaryRange} />
 
         <button onClick={apply} className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-lg">
-          Apply
+          Apply Filters
         </button>
       </div>
     </div>

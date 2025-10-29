@@ -9,7 +9,7 @@ connectDB();
 
 const app = express();
 const allowedOrigins = [
-  `${process.env.FRONTEND_URL}`,
+  "https://job-management-cybermind.vercel.app",
   "http://localhost:5173",                          
 ];
 
