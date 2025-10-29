@@ -1,0 +1,30 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-select {
+  background-color: white;
+  color: #242ebb; /* gray-700 */
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  width: 220px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  outline: none;
+}
+
+.custom-select:focus {
+  box-shadow: 0 0 0 2px #6366f1; /* indigo ring */
+}
+
+/* Some browsers allow this */
+.custom-select option {
+  background-color: white;
+  color: #242ebb;
+  padding: 8px;
+}
+
