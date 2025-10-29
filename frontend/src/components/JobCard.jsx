@@ -2,6 +2,9 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { timeAgo } from '../utils/timeAgo'
 import { getCompanyLogo } from '../utils/getCompanyLogo';
+import expsvg from '../assets/exp.svg'
+import locationsvg from '../assets/location.svg'
+import salarysvg from '../assets/salary.svg'
 
 
 export default function JobCard({ job }) {
@@ -35,13 +38,24 @@ export default function JobCard({ job }) {
             <p className="text-gray-500 text-sm">{job.companyName}</p>
         </div>
 
-      <div className="flex flex-wrap gap-4 mt-3 text-sm text-gray-600">
-        <span>👤 {job.minExperience||0} - {job.maxExperience||0} years</span>
-        <span>📍 {Array.isArray(job.location) ? job.location.join(', ') : job.location}</span>
-        <span>💼 {job.jobType}</span>
+      <div className="flex flex-wrap gap-3 mt-3 text-sm text-gray-600">
+        <div className='flex gap-1'>
+          <img src={expsvg} className='w-5 h-5'/> {job.minExperience||0} - {job.maxExperience||0} years
+        </div>
+
+        <div className='flex gap-1'>
+          <img src={locationsvg} className='w-5 h-5' /> {Array.isArray(job.location) ? job.location.join(', ') : job.location}
+        </div>
+
         {(job.minSalary || job.maxSalary) && (
-          <span>💰 ₹{Math.round((job.minSalary||0)/1000)}k - ₹{Math.round((job.maxSalary||0)/1000)}k</span>
+          <div className='flex gap-1'>
+            <img src={salarysvg} className='w-5 h-5'/> 
+            ₹{Math.round((job.minSalary||0)/1000)}k - ₹{Math.round((job.maxSalary||0)/1000)}k
+            </div>
         )}
+
+        <div>💼 {job.jobType} </div>
+        
         {/* <span>Last Date: {job.deadline}</span> */}
       </div>
 
